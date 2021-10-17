@@ -3,7 +3,7 @@ package viii.integrador.projeto.modelo;
 
 
 
-public class Teste {
+public class TesteAudio {
 	
 
 	public static void main(String[] args) {
