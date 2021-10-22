@@ -13,15 +13,17 @@ public class Audio {
 		try {
 			String nome = "C:/Users/Rodrigo/Documents/Projetos-Java-Eclipse/polo-alerta/src/viii/integrador/projeto/sons/alarme.wav";
 			File file = new File(nome); 
-			AudioInputStream stream = AudioSystem.getAudioInputStream(file);
-			clip = AudioSystem.getClip();
-			clip.open(stream);			
+			AudioInputStream stream = AudioSystem.getAudioInputStream(file);			
+			clip = AudioSystem.getClip();		
+			clip.open(stream);	
+			clip.loop(Clip.LOOP_CONTINUOUSLY);
 		} catch (Exception e) {
 			throw new Error(e.getMessage());
 		}
 	}
 	public void play() {
 		clip.start();
+		
 	}
 	public void stop() {
 		clip.stop();

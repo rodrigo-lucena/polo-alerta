@@ -50,7 +50,7 @@ public class Memoria extends TimerTask{
 		
 		String instante = instanteAtual.toString();
 		this.estado = instante;
-		//System.out.println(instante);
+		System.out.println(instante);
 		//System.out.println(estado);
 		//System.out.println(observadores);
 		

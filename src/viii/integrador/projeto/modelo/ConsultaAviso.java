@@ -10,7 +10,7 @@ import java.util.List;
 public class ConsultaAviso {
 	public static List<Aviso> consultar() throws SQLException{
 		Connection conexao = FabricaConexao.getConexao();
-		String sql = "SELECT * FROM avisos WHERE situacao=0";
+		String sql = "SELECT * FROM avisos WHERE situacao=1";
 		Statement stmt = conexao.createStatement();
 		ResultSet resultado = stmt.executeQuery(sql);
 		
@@ -26,5 +26,6 @@ public class ConsultaAviso {
 		conexao.close();
 		return avisos;
 	}
+	// Criar busca de eventos cuja situaca = 1
 
 }
