@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `polo` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
+USE `polo`;
 -- MySQL dump 10.13  Distrib 5.7.34, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: polo
@@ -54,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-10-22 20:59:03
+-- Dump completed on 2021-10-22 21:07:34
