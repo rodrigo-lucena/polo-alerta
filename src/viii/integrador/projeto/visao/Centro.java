@@ -28,9 +28,10 @@ public class Centro extends JPanel {
 	private int alternar = 0;
 	private List<Aviso> avisos = new ArrayList<Aviso>();
 	private final JLabel estado;
-	private final Icon FIGURA_POSITIVO = new ImageIcon("C:/Users/Rodrigo/Documents/Projetos-Java-Eclipse/polo-alerta/src/viii/integrador/projeto/imagens/positivo3.png");
-	private final Icon FIGURA_NEGATIVO = new ImageIcon("C:/Users/Rodrigo/Documents/Projetos-Java-Eclipse/polo-alerta/src/viii/integrador/projeto/imagens/negativo3.png");
-	private final Icon ATENCAO = new ImageIcon("C:/Users/Rodrigo/Documents/Projetos-Java-Eclipse/polo-alerta/src/viii/integrador/projeto/imagens/atencao.png");
+	private final String raiz = System.getProperty("user.dir");
+	private final Icon FIGURA_POSITIVO = new ImageIcon(raiz+"/src/viii/integrador/projeto/imagens/positivo3.png");
+	private final Icon FIGURA_NEGATIVO = new ImageIcon(raiz+"/src/viii/integrador/projeto/imagens/negativo3.png");
+	private final Icon ATENCAO = new ImageIcon(raiz+"/src/viii/integrador/projeto/imagens/atencao.png");
 	private String mensagens="";
 	
 	public Centro() {

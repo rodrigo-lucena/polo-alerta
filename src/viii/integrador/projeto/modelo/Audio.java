@@ -11,7 +11,7 @@ public class Audio {
 	public Audio() {
 		
 		try {
-			String nome = "C:/Users/Rodrigo/Documents/Projetos-Java-Eclipse/polo-alerta/src/viii/integrador/projeto/sons/alarme.wav";
+			String nome = System.getProperty("user.dir")+"/src/viii/integrador/projeto/sons/alarme.wav";
 			File file = new File(nome); 
 			AudioInputStream stream = AudioSystem.getAudioInputStream(file);			
 			clip = AudioSystem.getClip();		
