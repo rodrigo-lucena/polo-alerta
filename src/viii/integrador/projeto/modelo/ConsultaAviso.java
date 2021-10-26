@@ -26,6 +26,5 @@ public class ConsultaAviso {
 		conexao.close();
 		return avisos;
 	}
-	// Criar busca de eventos cuja situaca = 1
 
 }
