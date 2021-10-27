@@ -17,6 +17,7 @@ import javax.swing.SwingConstants;
 public class Superior extends JPanel {
 	private final JLabel titulo;
 	private final JLabel imagem;
+	private final String raiz = System.getProperty("user.dir");
 	public Superior() {
 		setBackground(new Color(0, 90, 107));
 		setLayout(new BorderLayout(5,5));
@@ -28,7 +29,7 @@ public class Superior extends JPanel {
 		titulo.setHorizontalAlignment(SwingConstants.LEFT);	
 		add(titulo, BorderLayout.NORTH);
 		
-		Icon polo = new ImageIcon("C:/Users/Rodrigo/Documents/Projetos-Java-Eclipse/polo-alerta/src/viii/integrador/projeto/imagens/polo.png");	
+		Icon polo = new ImageIcon(raiz+"/src/viii/integrador/projeto/imagens/polo.png");	
 		imagem = new JLabel(polo, SwingConstants.CENTER);		
 		add(imagem, BorderLayout.SOUTH);
 
