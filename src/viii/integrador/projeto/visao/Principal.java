@@ -37,10 +37,7 @@ public class Principal extends JFrame {
 		superior.setPreferredSize(new Dimension(400, 250));
 		panel.add(superior);
 		
-		Centro centro = new Centro();
-		centro.setPreferredSize(new Dimension(400,80));
-		centro.setSize(400,100);
-		panel.add(centro);
+		centro();
 		
 		Inferior inferior = new Inferior(panel,this);
 		inferior.setPreferredSize(new Dimension(150,300));
@@ -50,58 +47,7 @@ public class Principal extends JFrame {
 
 	}
 	
-	public void organizarPolo() {
-		getContentPane().setBackground(new Color(0, 90, 107));
-		panel.setBackground(new Color(0, 90, 107));
-		
-		Centro centro = new Centro();
-		centro.setPreferredSize(new Dimension(400,80));
-		centro.setSize(400,100);
-		panel.add(centro);
-		
-		JLabel titulo = new JLabel("  Polo Petroquímico de Capuava");
-		titulo.setForeground(Color.WHITE);
-		titulo.setFont(new Font("courier", Font.PLAIN, 15));
-		titulo.setHorizontalAlignment(SwingConstants.LEFT);	
-		panel.add(titulo, BorderLayout.NORTH);
-		
-		Box box = Box.createHorizontalBox();
-		String texto = "Ddddd ddd ddd ddddd dddd dddd dddd dddd ddd dddd ddd   ddddd  ddddd ddddd popopopo"
-				+ "Ddddd ddd ddd ddddd dddd dddd dddd dddd ddd dddd ddd   ddddd  ddddd ddddd popopopo"
-				+ "Ddddd ddd ddd ddddd dddd dddd dddd dddd ddd dddd ddd   ddddd  ddddd ddddd popopopo"
-				+ "Ddddd ddd ddd ddddd dddd dddd dddd dddd ddd dddd ddd   ddddd  ddddd ddddd popopopo"
-				+ "Ddddd ddd ddd ddddd dddd dddd dddd dddd ddd dddd ddd   ddddd  ddddd ddddd popopopo"
-				+ "Ddddd ddd ddd ddddd dddd dddd dddd dddd ddd dddd ddd   ddddd  ddddd ddddd popopopo"
-				+ "Ddddd ddd ddd ddddd dddd dddd dddd dddd ddd dddd ddd   ddddd  ddddd ddddd popopopo"
-				+ "Ddddd ddd ddd ddddd dddd dddd dddd dddd ddd dddd ddd   ddddd  ddddd ddddd popopopo"
-				+ "Ddddd ddd ddd ddddd dddd dddd dddd dddd ddd dddd ddd   ddddd  ddddd ddddd popopopo"
-				+ "Ddddd ddd ddd ddddd dddd dddd dddd dddd ddd dddd ddd   ddddd  ddddd ddddd popopopo"
-				+ "Ddddd ddd ddd ddddd dddd dddd dddd dddd ddd dddd ddd   ddddd  ddddd ddddd popopopo"
-				+ "Ddddd ddd ddd ddddd dddd dddd dddd dddd ddd dddd ddd   ddddd  ddddd ddddd popopopo"
-				+ "Ddddd ddd ddd ddddd dddd dddd dddd dddd ddd dddd ddd   ddddd  ddddd ddddd popopopo"
-				+ "Ddddd ddd ddd ddddd dddd dddd dddd dddd ddd dddd ddd   ddddd  ddddd ddddd popopopo"
-				+ "Ddddd ddd ddd ddddd dddd dddd dddd dddd ddd dddd ddd   ddddd  ddddd ddddd popopopo"
-				+ "Ddddd ddd ddd ddddd dddd dddd dddd dddd ddd dddd ddd   ddddd  ddddd ddddd popopopo"
-				+ "Ddddd ddd ddd ddddd dddd dddd dddd dddd ddd dddd ddd   ddddd  ddddd ddddd popopopo"
-				+ "Ddddd ddd ddd ddddd dddd dddd dddd dddd ddd dddd ddd   ddddd  ddddd ddddd popopopo"
-				+ "Ddddd ddd ddd ddddd dddd dddd dddd dddd ddd dddd ddd   ddddd  ddddd ddddd popopopo"
-				+ "Ddddd ddd ddd ddddd dddd dddd dddd dddd ddd dddd ddd   ddddd  ddddd ddddd popopopo"
-				+ "Ddddd ddd ddd ddddd dddd dddd dddd dddd ddd dddd ddd   ddddd  ddddd ddddd popopopo"
-				+ "Ddddd ddd ddd ddddd dddd dddd dddd dddd ddd dddd ddd   ddddd  ddddd ddddd popopopo"
-				+ "Ddddd ddd ddd ddddd dddd dddd dddd dddd ddd dddd ddd   ddddd  ddddd ddddd popopopo"
-				+ "Ddddd ddd ddd ddddd dddd dddd dddd dddd ddd dddd ddd   ddddd  ddddd ddddd popopopo"
-				+ "Ddddd ddd ddd ddddd dddd dddd dddd dddd ddd dddd ddd   ddddd  ddddd ddddd popopopo"
-				+ "Ddddd ddd ddd ddddd dddd dddd dddd dddd ddd dddd ddd   ddddd  ddddd ddddd popopopo";
-		JTextArea textoArea = new JTextArea(texto,35,30);
-		textoArea.setLineWrap(true);
-		textoArea.setSize(10, 20);
-		textoArea.setBackground(new Color(0, 90, 107));
-		textoArea.setForeground(Color.WHITE);
-		box.setBackground(new Color(0, 90, 107));
-		box.add(new JScrollPane(textoArea));
-		
-		panel.add(box);
-		
+	public void voltar() {
 		JButton voltar = new JButton("Voltar");
 		panel.add(voltar);
 		
@@ -110,6 +56,28 @@ public class Principal extends JFrame {
 		
 		add(panel);
 		panel.revalidate();
+		
+	}
+	public void centro() {
+		Centro centro = new Centro();
+		centro.setPreferredSize(new Dimension(400,80));
+		centro.setSize(400,100);
+		panel.add(centro);
+		
+	}
+	
+	public void organizarPolo() {
+		getContentPane().setBackground(new Color(0, 90, 107));
+		panel.setBackground(new Color(0, 90, 107));
+		
+		centro();
+		
+		PoloPetroquimico polo = new PoloPetroquimico();
+		panel.add(polo);
+		
+		voltar();
+		
+		
 
 	}
 	public void organizarRiscos() {
@@ -117,19 +85,9 @@ public class Principal extends JFrame {
 
 		panel.setBackground(new Color(0, 90, 107));
 		
-		Centro centro = new Centro();
-		centro.setPreferredSize(new Dimension(400,80));
-		centro.setSize(400,100);
-		panel.add(centro);
-		
-		JButton voltar = new JButton("Voltar");
-		panel.add(voltar);
-		
-		EventoVoltar evento = new EventoVoltar();
-		voltar.addActionListener(evento);
-		
-		add(panel);
-		panel.revalidate();
+		centro();
+		// acrescentar classe
+		voltar();
 
 	}
 	
@@ -138,19 +96,9 @@ public class Principal extends JFrame {
 
 		panel.setBackground(new Color(0, 90, 107));
 		
-		Centro centro = new Centro();
-		centro.setPreferredSize(new Dimension(400,80));
-		centro.setSize(400,100);
-		panel.add(centro);
-		
-		JButton voltar = new JButton("Voltar");
-		panel.add(voltar);
-		
-		EventoVoltar evento = new EventoVoltar();
-		voltar.addActionListener(evento);
-		
-		add(panel);
-		panel.revalidate();
+		centro();
+		// acrescentar classe
+		voltar();
 
 	}
 	
@@ -159,20 +107,9 @@ public class Principal extends JFrame {
 
 		panel.setBackground(new Color(0, 90, 107));
 		
-		Centro centro = new Centro();
-		centro.setPreferredSize(new Dimension(400,80));
-		centro.setSize(400,100);
-		panel.add(centro);
-		
-		JButton voltar = new JButton("Voltar");
-		panel.add(voltar);
-		
-		EventoVoltar evento = new EventoVoltar();
-		voltar.addActionListener(evento);		
-		
-		add(panel);	
-		
-		panel.revalidate();
+		centro();
+		// acrescentar classe
+		voltar();
 
 	}
 
