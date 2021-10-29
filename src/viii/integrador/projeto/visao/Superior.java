@@ -29,7 +29,7 @@ public class Superior extends JPanel {
 		titulo.setHorizontalAlignment(SwingConstants.LEFT);	
 		add(titulo, BorderLayout.NORTH);
 		
-		Icon polo = new ImageIcon(raiz+"/src/viii/integrador/projeto/imagens/polo.png");	
+		Icon polo = new ImageIcon(raiz+"/src/viii/integrador/projeto/imagens/polo2.png");	
 		imagem = new JLabel(polo, SwingConstants.CENTER);		
 		add(imagem, BorderLayout.SOUTH);
 

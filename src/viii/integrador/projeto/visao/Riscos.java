@@ -14,34 +14,34 @@ import javax.swing.JTextArea;
 import javax.swing.SwingConstants;
 
 @SuppressWarnings("serial")
-public class PoloPetroquimico extends JPanel {
+public class Riscos extends JPanel{	
 	private final JLabel titulo;
 	private final JLabel imagem;
 	private final String raiz = System.getProperty("user.dir");
-	public PoloPetroquimico() {
+	public Riscos() {
 		setBackground(new Color(0, 90, 107));
 		setLayout(new BorderLayout(5,5));		
 		setBorder(BorderFactory.createEmptyBorder(10,10,10,10));	
 				
-		titulo = new JLabel("  Polo Petroquímico de Capuava");
+		titulo = new JLabel("  Riscos");
 		titulo.setForeground(Color.WHITE);
 		titulo.setFont(new Font("courier", Font.PLAIN, 15));
 		titulo.setHorizontalAlignment(SwingConstants.LEFT);	
 		add(titulo, BorderLayout.NORTH);
 		
-		Icon polo = new ImageIcon(raiz+"/src/viii/integrador/projeto/imagens/polo.png");	
+		Icon polo = new ImageIcon(raiz+"/src/viii/integrador/projeto/imagens/riscos.png");	
 		imagem = new JLabel(polo, SwingConstants.CENTER);		
 		add(imagem, BorderLayout.CENTER);
 			
 		Box box = Box.createHorizontalBox();
-		String texto = "    Constitui-se polo petroquímico, como o caso de Capuava na região do ABC Paulista, "
-				+ "um conjunto de empresas que atuam na extensa cadeia produtiva do setor, desde refinaria "
-				+ "de petróleo até engarrafadoras de gás. Por ser uma indústria de base, a petroquímica é "
-				+ "considerada a primeira geração da indústria química e elo inicial de diversos segmentos "
-				+ "de mercado, produzem etileno, propileno, polietileno dentre outros petroquímicos que "
-				+ "são matérias-primas para a fabricação de borrachas, tintas, produtos farmacêuticos, "
-				+ "vidros, embalagens, resinas, tubos, mangueiras, calçados, filmes plásticos, peças "
-				+ "injetadas, adesivos, espumas expandidas, agrotóxicos, portas, janelas, cosméticos.";
+		String texto = "    A indústria química é algo imprescindível na modernidade, tendo em vista as infinitas "
+				+ "funções que exerce, seja para a geração de energia ou nos fármacos. Diante dessa importância, "
+				+ "sempre é fundamental ressaltar os cuidados que as empresas que lidam com esses materiais.\n"
+				+ "    Os cuidados não devem ser restritos as questões internas da fábrica porque os riscos também "
+				+ "surgem na parte externa, como nos casos de poluição. É preciso levar em consideração fatores "
+				+ "como a forma de exposição como a contaminação por vias de penetração (como a respiração) ou a "
+				+ "exposição múltipla, como de quem trabalha e lida com os materiais. Assim, as empresas devem "
+				+ "sempre se atentar as normas e legislações vigentes.";
 		JTextArea textoArea = new JTextArea(texto,15,30);
 		textoArea.setLineWrap(true);
 		textoArea.setWrapStyleWord(true);
@@ -49,8 +49,6 @@ public class PoloPetroquimico extends JPanel {
 		textoArea.setForeground(Color.WHITE);
 		box.setBackground(new Color(0, 90, 107));
 		box.add(new JScrollPane(textoArea));		
-		add(box, BorderLayout.SOUTH);
-		
-	}
-
+		add(box, BorderLayout.SOUTH);		
+	}	
 }

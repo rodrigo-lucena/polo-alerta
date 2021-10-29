@@ -1,20 +1,13 @@
 package viii.integrador.projeto.visao;
 
-import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
-import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.Box;
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JTextArea;
-import javax.swing.SwingConstants;
 
 @SuppressWarnings("serial")
 public class Principal extends JFrame {
@@ -34,7 +27,7 @@ public class Principal extends JFrame {
 		panel.setBackground(new Color(0, 90, 107));
 		
 		Superior superior = new Superior();
-		superior.setPreferredSize(new Dimension(400, 250));
+		superior.setPreferredSize(new Dimension(400, 280));
 		panel.add(superior);
 		
 		centro();
@@ -86,7 +79,10 @@ public class Principal extends JFrame {
 		panel.setBackground(new Color(0, 90, 107));
 		
 		centro();
-		// acrescentar classe
+		
+		Riscos riscos = new Riscos();
+		panel.add(riscos);
+		
 		voltar();
 
 	}
@@ -97,7 +93,8 @@ public class Principal extends JFrame {
 		panel.setBackground(new Color(0, 90, 107));
 		
 		centro();
-		// acrescentar classe
+		Seguranca seguranca = new Seguranca();
+		panel.add(seguranca);
 		voltar();
 
 	}
@@ -108,7 +105,8 @@ public class Principal extends JFrame {
 		panel.setBackground(new Color(0, 90, 107));
 		
 		centro();
-		// acrescentar classe
+		Sobre sobre = new Sobre();
+		panel.add(sobre);
 		voltar();
 
 	}
